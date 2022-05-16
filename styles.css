@@ -1,4 +1,43 @@
-img{
+.logo{
     width: 44px;
     height: 55px;
+}
+
+.navbar {
+    max-width: 640px;
+    margin: 50px auto;
+    padding: 0 20px;
+    border: 2px solid beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.navbar_navigation {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    color: gray;
+
+}
+
+.navbar_navigation-item {
+    margin-left: 50px;
+}
+
+.navbar_link{
+    text-decoration: none;
+    color: inherit;
+
 }
