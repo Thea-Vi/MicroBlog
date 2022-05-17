@@ -23,23 +23,23 @@
             </ul>
         </div>
     </header>
-    <main>
+    <main class="main">
         <section>
             <h1>Add new entry</h1>
             <form class="form" action="/entry" method="POST">
                 <p class="form_input">
-                    <label for="sample_field">Sample:</label>
-                    <textarea name="content" id="entry" cols="30" rows="10"></textarea>
-                    <button class="form_submit" ype="submit">Submit</button>
+                    <label class="form_label "for="sample_field">Entry Contents:</label>
+                    <textarea class="form_textarea"name="content" id="entry" cols="30" rows="10"></textarea>
+                    <button class="form_submit" type="submit">Add entry</button>
                 </p>
             </form>
         </section>
         <section>
             <h1>Recent posts</h1>
-            <article>
+            <article class="entry">
                 <div>
-                    <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, ipsam.</h2>
-                    <time datetime="2022-02-20">Feb 20</time>
+                    <h2 class="entry_title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, ipsam.</h2>
+                    <time class="entry_date" datetime="2022-02-20">•Feb 20</time>
                 </div>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus quo placeat sunt quaerat eligendi aperiam corrupti dolor obcaecati sint fuga.
@@ -49,16 +49,16 @@
     </main>
     <footer class="footer">
         <div class="footer_content">
-            <section class="left">
+            <section class="footer_left">
                 <a class="footer_item href="">Made by Thea</a>
                 <a class="footer_item  href="">Check out my other projects</a>
             </section>
-            <section class="right">
+            <section class="footer_right">
                 <div class="footer_column">
                     <a href="" class="footer_item">Recent</a>
                     <a href="" class="footer_item">Calendar</a>
                 </div>
-                <div>
+                <div class="footer_column">
                     <a class="footer_item" href="">About</a>
                     <a class="footer_item" href="">How this was made</a>
                 </div>
