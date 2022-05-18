@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DailyBlog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
     <header class="navbar">
         <div class="navbar_logo">
-            <img class="logo" src="logo.jpeg" alt="notebook-logo" >DailyBlog
+            <img class="logo" src="/static/css/logo.jpeg" alt="notebook-logo" >DailyBlog
         </div>
         <div>
             <ul class="navbar_navigation">
@@ -26,7 +26,7 @@
     <main class="main">
         <section>
             <h1>Add new entry</h1>
-            <form class="form" action="/entry" method="POST">
+            <form class="form" method="POST">
                 <p class="form_input">
                     <label class="form_label "for="sample_field">Entry Contents:</label>
                     <textarea class="form_textarea"name="content" id="entry" cols="30" rows="10"></textarea>
@@ -36,15 +36,17 @@
         </section>
         <section>
             <h1>Recent posts</h1>
+            {% for entry in entries %}
             <article class="entry">
                 <div>
-                    <h2 class="entry_title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, ipsam.</h2>
-                    <time class="entry_date" datetime="2022-02-20">•Feb 20</time>
+                    <h2 class="entry_title">{{ entry[0] | truncate(30, true) }}</h2>
+                    <time class="entry_date" datetime="2022-02-20"> • {{ entry[1] }}</time>
                 </div>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus quo placeat sunt quaerat eligendi aperiam corrupti dolor obcaecati sint fuga.
+                <p class="entry_content">
+                    {{ entry[0] }}
                 </p>
             </article>
+            {% endfor %}
         </section>
     </main>
     <footer class="footer">
